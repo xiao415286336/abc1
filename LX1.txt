@@ -1,0 +1,21 @@
+string ds ="2020/2/20 10:10:20";
+   DateTime dt = DateTime.Parse(ds);
+   dt = dt.AddDays(25).AddHours(8);
+   Console.WriteLine($"25天后: {dt.Year}年{dt.Month}月{dt.Day}日 {dt.TimeOfDay}");
+   string yq = "2020/2/20 10:10:20";
+   DateTime dr = DateTime.Parse(yq);
+   dr = dr.AddDays(-25).AddHours(-8);
+   Console.WriteLine($"25天前: {dr.Year}年{dr.Month}月{dr.Day}日 {dr.TimeOfDay}");
+
+
+
+static void Main(string[] args)
+      {
+        int?[ ] arr = { 3, 7, null, 2, 5};
+        int? s = 1;
+        foreach (int? a in arr)
+    s *= a??1;
+        Console.WriteLine(s);
+      }
+
+
